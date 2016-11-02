@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class Home extends Component {
   render () {
@@ -10,4 +11,12 @@ class Home extends Component {
   }
 }
 
-export default Home
+const { object } = React.PropTypes
+
+Home.propTypes = {
+  foodTruck: object
+}
+
+const mapStateToProps = (state) => ({foodTruck: state.foodTruck})
+
+export default connect(mapStateToProps)(Home)
