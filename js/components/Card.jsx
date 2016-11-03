@@ -10,7 +10,7 @@ class Card extends Component {
         <div>Type: {item.facilitytype}</div>
         <div>Address: {item.address}</div>
         <div>Hours: {item.dayshours}</div>
-        <div>Contents: {item.fooditems ? item.fooditems.split(':').join(',') : ''}</div>
+        <div>Contents: {item.fooditems.split(':').join(',')}</div>
       </div>
     )) : []
   }
