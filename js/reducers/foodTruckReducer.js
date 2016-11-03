@@ -12,7 +12,7 @@ export default function reducer (state = {
       return { ...state, fetching: false, error: action.payload }
     }
     case 'FETCH_FOODTRUCK_FULFILLED': {
-      return { ...state, fetched: true, list: action.payload, filterProjList: action.payload }
+      return { ...state, fetched: true, list: action.payload }
     }
     default: {
       return { ...state }
