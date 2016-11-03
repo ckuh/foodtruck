@@ -6,22 +6,16 @@ export default function reducer (state = {
 }, action) {
   switch (action.type) {
     case 'FETCH_FOODTRUCK': {
-      const newState = {}
-      Object.assign(newState, state, {fetching: true})
-      return newState
+      return { ...state, fetching: true }
     }
     case 'FETCH_FOODTRUCK_REJECTED': {
-      const newState = {}
-      Object.assign(newState, state, {fetching: false, error: action.payload})
-      return newState
+      return { ...state, fetching: false, error: action.payload }
     }
     case 'FETCH_FOODTRUCK_FULFILLED': {
-      const newState = {}
-      Object.assign(newState, state, {fetching: false, fetched: true, list: action.payload.data, filterProjList: action.payload.data})
-      return newState
+      return { ...state, fetched: true, list: action.payload, filterProjList: action.payload }
     }
     default: {
-      return state
+      return { ...state }
     }
   }
 }
