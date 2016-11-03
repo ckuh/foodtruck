@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 // actions
 import { getFoodTrucks } from '../actions/foodTruck'
 
+// components
+import Card from './Card'
+
 class Home extends Component {
 
   componentWillMount () {
@@ -14,6 +17,7 @@ class Home extends Component {
     return (
       <div>
         <h1>Hello World!</h1>
+        <Card />
       </div>
     )
   }
