@@ -16,7 +16,6 @@ class Card extends Component {
   }
 
   render () {
-    console.log(this.props.foodTruck)
     return (
       <div>
         {this.renderFoodTruck()}

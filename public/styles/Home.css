@@ -1,0 +1,11 @@
+.search_container {
+  position: relative;
+  width: 65%;
+  margin: 1em auto;
+}
+
+.search_container i {
+  position: absolute;
+  right: 0.35em;
+  top: 6px;
+}

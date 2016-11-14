@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 
 // actions
 import { getFoodTrucks } from '../actions/foodTruck'
+import Geosuggest from 'react-geosuggest'
 
 // components
-import Card from './Card'
 
 class Home extends Component {
 
@@ -13,11 +13,21 @@ class Home extends Component {
     this.props.getFoodTrucks()
   }
 
+  onSuggestSelect (suggest) {
+    console.log(suggest)
+  }
+
   render () {
     return (
-      <div>
-        <h1>Hello World!</h1>
-        <Card />
+      <div style={{width: '90%', margin: '0 auto'}}>
+        <h1 style={{textAlign: 'center'}}>Food Finder</h1>
+        <div className='search_container'>
+          <Geosuggest
+            placeholder='Location'
+            onSuggestSelect={this.onSuggestSelect}
+          />
+          <i className='material-icons'>search</i>
+        </div>
       </div>
     )
   }
